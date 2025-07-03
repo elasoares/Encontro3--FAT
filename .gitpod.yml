@@ -1,0 +1,9 @@
+# .gitpod.yml na raiz do seu projeto Spring Boot
+# Exemplo básico - você pode personalizar mais
+image: gitpod/workspace-java-spring # Imagem base com Java e Spring
+tasks:
+  - init: mvn clean install # Executa Maven install na inicialização
+    command: mvn spring-boot:run # Comando para rodar sua aplicação
+ports:
+  - port: 8080 # Porta padrão do Spring Boot
+    onOpen: open-preview # Abre uma pré-visualização no navegador
